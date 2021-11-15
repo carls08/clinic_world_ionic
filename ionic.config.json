@@ -1,0 +1,7 @@
+{
+  "name": "CLINIC WORLD IONIC",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
