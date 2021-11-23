@@ -1,32 +1,34 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LayoutComponent } from './pages/layout/layout.component';
 
 const routes: Routes = [
   {
+    path: 'admin',
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'medico',
+        loadChildren: () => import('./pages/medico/medico.module').then(m => m.MedicoPageModule)
+      },
+      {
+        path: 'citas',
+        loadChildren: () => import('./pages/citas/citas.module').then(m => m.CitasPageModule)
+      },
+      {
+        path: 'clientes',
+        loadChildren: () => import('./pages/clientes/clientes.module').then(m => m.ClientesPageModule)
+      },
+      {
+        path: 'usuarios',
+        loadChildren: () => import('./pages/usuarios/usuarios.module').then(m => m.UsuariosPageModule)
+      }
+    ]
+  },
+  {
     path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
-  },
-  {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
-  },  {
-    path: 'medico',
-    loadChildren: () => import('./medico/medico.module').then( m => m.MedicoPageModule)
-  },
-  {
-    path: 'citas',
-    loadChildren: () => import('./citas/citas.module').then( m => m.CitasPageModule)
-  },
-  {
-    path: 'clientes',
-    loadChildren: () => import('./clientes/clientes.module').then( m => m.ClientesPageModule)
-  },
-  {
-    path: 'usuarios',
-    loadChildren: () => import('./usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
   }
-
 ];
 
 @NgModule({
@@ -35,4 +37,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
