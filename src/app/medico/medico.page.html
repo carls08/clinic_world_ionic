@@ -1,9 +1,32 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>medico</ion-title>
+    
+    <ion-title>MEDICO</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <p class="ion-text-center">
+    <img src="https://cdn.icon-icons.com/icons2/20/PNG/128/business_application_addmale_useradd_insert_add_user_client_2312.png" >
+  </p>
+  <ion-item>
+    <ion-label position="floating">
+      Nombre de Medico
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Nombre de Especialidad
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>FECHA</ion-label>
+    <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+  </ion-item>
+  <p class="ion-text-center">
+    <ion-button (click)="alta(myform.value)"  >Agregar ESPECIALIDAD-MEDICO</ion-button>
+    </p>
+  
 </ion-content>

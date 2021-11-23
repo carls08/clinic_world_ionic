@@ -13,6 +13,14 @@ const routes: Routes = [
   },  {
     path: 'medico',
     loadChildren: () => import('./medico/medico.module').then( m => m.MedicoPageModule)
+  },
+  {
+    path: 'citas',
+    loadChildren: () => import('./citas/citas.module').then( m => m.CitasPageModule)
+  },
+  {
+    path: 'clientes',
+    loadChildren: () => import('./clientes/clientes.module').then( m => m.ClientesPageModule)
   }
 
 ];

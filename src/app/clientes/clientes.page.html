@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>clientes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <p class="ion-text-center">
+    <img src="https://cdn.icon-icons.com/icons2/20/PNG/128/business_application_addmale_useradd_insert_add_user_client_2312.png" >
+  </p>
+  <ion-item>
+    <ion-label>Tipo de documento</ion-label>
+    <ion-select placeholder="Select One">
+      <ion-select-option value="f">CC</ion-select-option>
+      <ion-select-option value="m">TI</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Numero de documento
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Edad
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Primer nombre
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+     Segundo nombre
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Primer apellido
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Segundo apellido
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Direccion
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Telefono
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">
+      Correo
+    </ion-label>
+    <ion-input type="text" ></ion-input>
+  </ion-item>
+  
+  <p class="ion-text-center">
+    <ion-button (click)="alta(myform.value)"  >
+      Agregar Cliente
+    </ion-button>
+    </p>
+</ion-content>
