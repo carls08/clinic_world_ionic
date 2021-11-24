@@ -6,73 +6,78 @@
 
 <ion-content>
   <p class="ion-text-center">
-    <img src="https://cdn.icon-icons.com/icons2/20/PNG/128/business_application_addmale_useradd_insert_add_user_client_2312.png" >
+    <img
+      src="https://cdn.icon-icons.com/icons2/20/PNG/128/business_application_addmale_useradd_insert_add_user_client_2312.png">
   </p>
-  <ion-item>
-    <ion-label>Tipo de documento</ion-label>
-    <ion-select placeholder="Select One" formControlName="tipo_documento">
-      <ion-select-option value="CC">CC</ion-select-option>
-      <ion-select-option value="TI">TI</ion-select-option>
-    </ion-select>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      Numero de documento
-    </ion-label>
-    <ion-input type="text" formControlName="numero_documento"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      Edad
-    </ion-label>
-    <ion-input type="text" formControlName="edad"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      Primer nombre
-    </ion-label>
-    <ion-input type="text" formControlName="nombre" ></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-     Segundo nombre
-    </ion-label>
-    <ion-input type="text" formControlName="segundo_nombre"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      Primer apellido
-    </ion-label>
-    <ion-input type="text" formControlName="apellido"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      Segundo apellido
-    </ion-label>
-    <ion-input type="text" formControlName="segundo_apellido"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      Direccion
-    </ion-label>
-    <ion-input type="text" formControlName="direccion" ></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      Telefono
-    </ion-label>
-    <ion-input type="text" formControlName="telefono"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label position="floating">
-      Correo
-    </ion-label>
-    <ion-input type="text" formControlName="correo"></ion-input>
-  </ion-item>
-  
+
+  <form [formGroup]="formClientes">
+    <ion-item>
+      <ion-label>Tipo de documento</ion-label>
+      <ion-select placeholder="Select One" formControlName="tipo_documento">
+        <ion-select-option value="CC">CC</ion-select-option>
+        <ion-select-option value="TI">TI</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Numero de documento
+      </ion-label>
+      <ion-input type="text" formControlName="numero_documento"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Edad
+      </ion-label>
+      <ion-input type="text" formControlName="edad"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Primer nombre
+      </ion-label>
+      <ion-input type="text" formControlName="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Segundo nombre
+      </ion-label>
+      <ion-input type="text" formControlName="segundo_nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Primer apellido
+      </ion-label>
+      <ion-input type="text" formControlName="apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Segundo apellido
+      </ion-label>
+      <ion-input type="text" formControlName="segundo_apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Direccion
+      </ion-label>
+      <ion-input type="text" formControlName="direccion"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Telefono
+      </ion-label>
+      <ion-input type="text" formControlName="telefono"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">
+        Correo
+      </ion-label>
+      <ion-input type="text" formControlName="correo"></ion-input>
+    </ion-item>
+
+  </form>
+
   <p class="ion-text-center">
-    <ion-button (click)="alta(myform.value)"  >
+    <ion-button (click)="alta(myform.value)">
       Agregar Cliente
     </ion-button>
-    </p>
+  </p>
 </ion-content>

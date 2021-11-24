@@ -26,6 +26,29 @@ def index():
             "Mensaje": "Bienvenido a Clinic World - Seccion de CITAS"
         })
 
+@cross_origin()
+@app.route('/loggin', methods=['POST'])
+def login():
+    #Analice the type of method to send information
+    if (request.method == 'POST'):
+        usuario = request.json['usuario']
+        contraseña = request.json['contraseña']
+        print(contraseña)
+        con = mysql.connection.cursor()
+        con.execute('SELECT concat(nombre, " ", apellido)  as USUARIO, usuario, idUsuario FROM usuarios WHERE usuario = %s AND contraseña = %s', (usuario, contraseña))
+        res = con.fetchall()
+        #verificacion usuario
+        if(res):
+            data = {
+                'nombre': res[0][0],
+                'usuario': res[0][1],
+                'id': res[0][2],
+                'logged': True
+            }
+            return jsonify(data)
+        else:
+            return jsonify(False)
+
 
 # COMIENZO DE LA TABLA TIPO DE USUARIOS
 
