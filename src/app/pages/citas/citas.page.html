@@ -10,20 +10,20 @@
     <img src="https://cdn.icon-icons.com/icons2/20/PNG/128/business_application_addmale_useradd_insert_add_user_client_2312.png" >
   </p>
   <ion-item>
-    <ion-label position="floating">
+    <ion-label position="floating" >
       Identificacion de usuario
     </ion-label>
-    <ion-input type="text" ></ion-input>
+    <ion-input type="text" formControlName= "idCliente"></ion-input>
   </ion-item>
   <ion-item>
-    <ion-label position="floating">
+    <ion-label position="floating" formControlName= "idEspecialidad_medico">
       Nombre de medico
     </ion-label>
     <ion-input type="text" ></ion-input>
   </ion-item>
   <ion-item>
     <ion-label>FECHA</ion-label>
-    <ion-datetime displayFormat="MM DD YY" placeholder="Select Date"></ion-datetime>
+    <ion-datetime displayFormat="MM DD YY" placeholder="Select Date" formControlName= "fecha_hora"></ion-datetime>
   </ion-item>
   <p class="ion-text-center">
     <ion-button (click)="alta(myform.value)"  >Guardar citas</ion-button>

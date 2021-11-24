@@ -28,7 +28,7 @@ const routes: Routes = [
 
   {
     path: 'tipo-usuario',
-    loadChildren: () => import('./tipo-usuario/tipo-usuario.module').then( m => m.TipoUsuarioPageModule)
+    loadChildren: () => import('./pages/tipo-usuario/tipo-usuario.module').then( m => m.TipoUsuarioPageModule)
   },
   {
    
