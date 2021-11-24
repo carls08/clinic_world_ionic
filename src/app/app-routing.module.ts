@@ -25,6 +25,14 @@ const routes: Routes = [
   {
     path: 'usuarios',
     loadChildren: () => import('./usuarios/usuarios.module').then( m => m.UsuariosPageModule)
+  },
+  {
+    path: 'tipo-usuario',
+    loadChildren: () => import('./tipo-usuario/tipo-usuario.module').then( m => m.TipoUsuarioPageModule)
+  },
+  {
+    path: 'especialidad',
+    loadChildren: () => import('./especialidad/especialidad.module').then( m => m.EspecialidadPageModule)
   }
 
 ];

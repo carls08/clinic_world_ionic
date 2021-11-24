@@ -11,6 +11,8 @@ export class AppComponent {
     { title: 'Citas', url: 'citas', icon: 'paper-plane' },
     { title: 'Clientes', url: 'clientes', icon: 'paper-plane' },
     { title: 'Usuarios', url: 'usuarios', icon: 'paper-plane' },
+    { title: 'Tipo Usuario', url: 'tipo-usuario', icon: 'paper-plane' },
+    { title: 'Especialidad', url: 'especialidad', icon: 'paper-plane' },
   ];
   public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
