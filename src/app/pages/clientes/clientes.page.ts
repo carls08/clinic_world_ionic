@@ -21,7 +21,8 @@ formClientes : FormGroup
     'direccion': ['',[Validators.required]],
     'telefono': ['',[Validators.required]],
     'usuario': ['',[Validators.required]],
-    'contraseña': ['',[Validators.required]]
+    'contraseña': ['',[Validators.required]],
+    'correo': ['',[Validators.required]]
   })
     
    }
